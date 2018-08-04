@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	var turnOffButton = this.getElementById('turn-off');
     var reminderIntervalInput = document.getElementById('reminder-interval');
     var errorMessage = document.getElementById("error");
+    var facebookLink = this.getElementById("facebookLink");
+    var myFacebookLink = "https://www.facebook.com/kadamanuj";
 
     chrome.permissions.contains({
     	permissions: ["storage"]
@@ -54,6 +56,12 @@ document.addEventListener('DOMContentLoaded', function() {
 		})
 	})
 	
+
+	//This function opens my facebook profile in a new tab.
+	facebookLink.addEventListener('click', function(){
+  		chrome.tabs.create({ url: myFacebookLink });
+	});
+
     //This function validates the interval value.
     var IsValidIntervalValue = function(intervalValue) {
         if (intervalValue) {

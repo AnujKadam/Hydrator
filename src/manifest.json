@@ -3,7 +3,7 @@
 
   "name": "Hydrator",
   "description": "Allows you to set a reminder to drink water.",
-  "version": "0.0.0.1",
+  "version": "0.0.0.2",
   "author": "Anuj Kadam",
 
   "browser_action": {
